@@ -9,4 +9,4 @@ dado.setCor(cor)
 dado.setLado(qtde)
 
 print("Cor do Dado:", Dado.getCor(dado))
-print("Lado do Dado", Dado.getLado(dado))
+print("Lado do Dado:", Dado.getLado(dado))
