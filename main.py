@@ -13,7 +13,7 @@ print("Lado do Dado:", Dado.getLado(dado))
 
 while True:
     rodar = input("Rodar o dado novamente?<S/n>\n:")
-    if rodar == "S" or cond == "s":
+    if rodar == "S" or rodar == "s":
         dado.setLado(qtde)
         print("Lado do Dado:", Dado.getLado(dado))
     else:
