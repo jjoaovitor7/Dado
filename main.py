@@ -12,15 +12,15 @@ def main():
     dado = Dado(cor, qtde)
 
     dado.setCor(cor)
-    dado.setLado(qtde)
-
     print("Cor do Dado:", Dado.getCor(dado))
+
+    dado.rolar(qtde)
     print("Lado do Dado:", Dado.getLado(dado))
 
     while True:
-        rodar = input("Rodar o dado novamente?<S/n>\n:")
-        if rodar == "S" or rodar == "s":
-            dado.setLado(qtde)
+        rolar = input("Rolar o dado novamente?<S/n>\n:")
+        if rolar == "S" or rolar == "s":
+            dado.rolar(qtde)
             print("Lado do Dado:", Dado.getLado(dado))
         else:
             break
