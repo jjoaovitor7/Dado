@@ -1,20 +1,29 @@
 from src.Dado import Dado
 
-cor  = input("Cor do Dado:")
-qtde = int(input("Quantidade de Lados:"))
+def main():
+    cor = input("Cor do Dado:")
 
-dado = Dado(cor, qtde)
+    try:
+        qtde = int(input("Quantidade de Lados:"))
+    except ValueError:
+        print("Somente números.")
+        return 0
 
-dado.setCor(cor)
-dado.setLado(qtde)
+    dado = Dado(cor, qtde)
 
-print("Cor do Dado:", Dado.getCor(dado))
-print("Lado do Dado:", Dado.getLado(dado))
+    dado.setCor(cor)
+    dado.setLado(qtde)
 
-while True:
-    rodar = input("Rodar o dado novamente?<S/n>\n:")
-    if rodar == "S" or rodar == "s":
-        dado.setLado(qtde)
-        print("Lado do Dado:", Dado.getLado(dado))
-    else:
-        break
+    print("Cor do Dado:", Dado.getCor(dado))
+    print("Lado do Dado:", Dado.getLado(dado))
+
+    while True:
+        rodar = input("Rodar o dado novamente?<S/n>\n:")
+        if rodar == "S" or rodar == "s":
+            dado.setLado(qtde)
+            print("Lado do Dado:", Dado.getLado(dado))
+        else:
+            break
+
+if __name__ == "__main__":
+    main()
