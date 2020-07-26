@@ -11,7 +11,7 @@ class Dado(object):
     def getCor(self):
         return self._cor
 
-    def setLado(self, qtde):
+    def rolar(self, qtde):
         self._lado = random.randint(1, qtde)
 
     def getLado(self):
