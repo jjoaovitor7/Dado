@@ -1,10 +1,10 @@
 from src.Dado import Dado
 
 def main():
-    cor = input("Cor do Dado:")
+    cor = str(input("Cor do Dado: "))
 
     try:
-        qtde = int(input("Quantidade de Lados:"))
+        qtde = int(input("Quantidade de Lados: "))
     except ValueError:
         print("Somente números.")
         return 0
