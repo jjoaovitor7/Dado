@@ -29,4 +29,4 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("Programa interrompido.")
+        print("\nPrograma interrompido.")
